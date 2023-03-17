@@ -27,7 +27,7 @@ public class UserController {
     private final UserService userService;
 
     @Operation(
-            summary = "회원 등록1", description = "",
+            summary = "회원 등록", description = "",
             responses = {@ApiResponse(content = @Content(schema = @Schema(implementation = Long.class)))})
     @PostMapping("/signup")
     @ResponseStatus(HttpStatus.OK)
