@@ -1,0 +1,33 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: refund-service
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:~/test
+    username: sa
+    password:
+jpa:
+  database-platform: org.hibernate.dialect.H2Dialect
+  properties:
+    hibernate:
+      format_sql: true
+      show_sql: true
+      dialect: org.hibernate.dialect.H2Dialect
+  hibernate:
+    ddl-auto: create
+logging:
+  level:
+    org.hibernate.SQL: debug
+    org.hibernate.type: trace
+jwt:
+  secret:
+    key: e8daf98ca8f97bd12837b7de7ca1d8f04f13e972761807a7369920f509c359c9bf9f0ba25855540d3e95a01793da986aca26e49b3a576037ebda2aceb30f6c91
